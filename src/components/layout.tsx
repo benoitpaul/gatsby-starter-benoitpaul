@@ -9,7 +9,6 @@ import React, { FC, ReactNode } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
-// import './layout.css';
 import GlobalStyle from '../styles/GlobalStyle';
 
 interface LayoutProps {
