@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-starter-benoitpaul",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Benoit Paul Gatsby starter",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Benoit Paul <benoit.paul@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.12.1",
@@ -25,6 +25,7 @@
     "typescript": "^4.4.2"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^27.0.1",
@@ -35,18 +36,23 @@
     "@types/styled-components": "^5.1.13",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
+    "axe-core": "^4.3.3",
     "babel-jest": "^27.1.0",
     "babel-preset-gatsby": "^1.12.0",
+    "cypress": "^8.3.1",
+    "cypress-axe": "^0.13.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^14.0.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-react": "^7.25.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.1.0",
     "prettier": "2.3.2",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "start-server-and-test": "^1.13.1"
   },
   "keywords": [
     "gatsby"
@@ -61,14 +67,18 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/benoitpaul/gatsby-starter-benoitpaul"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/benoitpaul/gatsby-starter-benoitpaul/issues"
   }
 }
