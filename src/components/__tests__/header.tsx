@@ -1,18 +1,6 @@
-// import React from 'react';
-// import renderer from 'react-test-renderer';
-// import Header from '../header';
-
-// describe('Header', () => {
-//   it('renders correctly', () => {
-//     const tree = renderer
-//       .create(<Header siteTitle="Default Starter" />)
-//       .toJSON();
-//     expect(tree).toMatchSnapshot();
-//   });
-// });
-
 import React from 'react';
 import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
 // You have to write data-testid
 const Title = () => <h1 data-testid="hero-title">Gatsby is awesome!</h1>;
