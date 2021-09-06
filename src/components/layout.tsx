@@ -15,8 +15,16 @@ interface LayoutProps {
   children: ReactNode;
 }
 
+interface SiteProps {
+  site: {
+    siteMetadata: {
+      title: string;
+    };
+  };
+}
+
 const Layout: FC<LayoutProps> = ({ children }) => {
-  const data = useStaticQuery(graphql`
+  const data: SiteProps = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -29,7 +37,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Header siteTitle={data.site.siteMetadata?.title || 'Title'} />
+      <Header siteTitle={data?.site?.siteMetadata?.title || 'Title'} />
       <div
         style={{
           margin: '0 auto',
