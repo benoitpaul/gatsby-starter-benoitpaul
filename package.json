@@ -63,6 +63,7 @@
   ],
   "license": "0BSD",
   "scripts": {
+    "prepare": "husky install",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
@@ -78,12 +79,6 @@
     "test:coverage": "jest --coverage",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo \"aaaaaaaaaaaaaaaaaaaaaaaaaa\"",
-      "pre-push": "npm run test -- --watchAll=false"
-    }
   },
   "repository": {
     "type": "git",
