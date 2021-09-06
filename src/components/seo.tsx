@@ -8,7 +8,6 @@
 import React, { FC } from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-import { string } from 'prop-types';
 
 interface SeoProps {
   description?: string;
@@ -46,11 +45,6 @@ const Seo: FC<SeoProps> = ({
       }
     `
   );
-
-  const a = 0;
-  const ab = 0;
-  const b = 0;
-  const c = 0;
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
