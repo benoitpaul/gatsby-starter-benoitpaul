@@ -47,6 +47,8 @@ const Seo: FC<SeoProps> = ({
     `
   );
 
+  const a = 0;
+
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
 
